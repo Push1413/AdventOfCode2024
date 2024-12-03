@@ -3,12 +3,11 @@ package org.devpush.com.day02;
 import org.devpush.com.Utils;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class day2 {
+public class Day2 {
     static int safeReports =0;
     public static void main(String[] args) throws IOException {
         List<List<Integer>> ipForSecond = firstStar();

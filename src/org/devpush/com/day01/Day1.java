@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class day1 {
+public class Day1 {
     public static void main(String[] args) throws IOException {
         firstStar();
         secondStar();
