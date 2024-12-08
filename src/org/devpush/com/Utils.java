@@ -23,4 +23,32 @@ public class Utils {
         }
         return list;
     }
+
+    public static char[][] convertListToMatrix(List<String> list) {
+        if (list == null || list.isEmpty()) {
+            return new char[0][0];
+        }
+
+        int rows = list.size();
+        int cols = list.get(0).length();
+        char[][] matrix = new char[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            matrix[i] = list.get(i).toCharArray();
+        }
+
+        return matrix;
+    }
+
+    public static boolean isSafe(int row, int col, char[][] matrix) {
+        int rowSize = matrix.length;
+        int colSize = matrix[0].length;
+
+        if ((row == 0 || col == 0 || row == (rowSize - 1) || col == (colSize - 1)) && matrix[row][col] == '.') {
+            return false;
+        }
+
+        return (row >= 0 && row < (rowSize) && col >= 0 && col < (colSize));
+
+    }
 }

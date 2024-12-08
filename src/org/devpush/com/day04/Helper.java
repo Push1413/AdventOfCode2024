@@ -1,24 +1,6 @@
 package org.devpush.com.day04;
 
-import java.util.List;
-
 public class Helper {
-
-    public char[][] convertListToMatrix(List<String> list) {
-        if (list == null || list.isEmpty()) {
-            return new char[0][0];
-        }
-
-        int rows = list.size();
-        int cols = list.get(0).length();
-        char[][] matrix = new char[rows][cols];
-
-        for (int i = 0; i < rows; i++) {
-            matrix[i] = list.get(i).toCharArray();
-        }
-
-        return matrix;
-    }
 
     public int DFS(int i, int j, char[][] matrix) {
         int[][] directions = {
@@ -101,52 +83,6 @@ public class Helper {
         }
 
     }
-
-//    public boolean isXPatternFound(int i, int j, char[][] matrix) {
-//        // Directions for the X pattern: top-left, top-right, bottom-left, bottom-right
-//        int[][] directions = {{-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
-//
-//        for (int[] dir : directions) {
-//            if (checkXPatternInDirection(i, j, matrix, dir[0], dir[1])) {
-//                return true;
-//            }
-//        }
-//
-//        return false;
-//    }
-
-//    private static boolean checkXPatternInDirection(int i, int j, char[][] matrix, int di, int dj) {
-//        // Check both forward and backward 'MAS' patterns
-//        // Case 1: M first, then A, then S
-//        if (checkSequence(i, j, matrix,
-//                new char[]{'M', 'A', 'S'},
-//                di, dj)) {
-//            return true;
-//        }
-//
-//        // Case 2: S first, then A, then M (reversed pattern)
-//        if (checkSequence(i, j, matrix,
-//                new char[]{'S', 'A', 'M'},
-//                di, dj)) {
-//            return true;
-//        }
-//
-//        return false;
-//    }
-
-//    private static boolean checkSequence(int i, int j, char[][] matrix, char[] sequence, int di, int dj) {
-//        for (int k = 0; k < sequence.length; k++) {
-//            int ni = i + k * di;
-//            int nj = j + k * dj;
-//
-//            // Check if the current position is safe and matches the expected character
-//            if (!isSafe(ni, nj, matrix) || matrix[ni][nj] != sequence[k]) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-
 
     private static boolean isSafe(int i, int j, char[][] matrix) {
         int rowSize = matrix.length;

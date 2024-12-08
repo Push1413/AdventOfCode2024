@@ -17,7 +17,7 @@ public class Day4 {
         int rows = lines.size();
         int columns = lines.get(0).length();
         int counter = 0;
-        char[][] matrix = hp.convertListToMatrix(lines);
+        char[][] matrix = Utils.convertListToMatrix(lines);
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (matrix[i][j] == 'X') {
@@ -35,7 +35,7 @@ public class Day4 {
         int columns = lines.get(0).length();
         int counter = 0;
         Helper hp = new Helper();
-        char[][] matrix = hp.convertListToMatrix(lines);
+        char[][] matrix = Utils.convertListToMatrix(lines);
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
