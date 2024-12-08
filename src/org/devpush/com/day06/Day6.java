@@ -3,9 +3,7 @@ package org.devpush.com.day06;
 import org.devpush.com.Utils;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Day6 {
     public static final int NORTH = 0;
