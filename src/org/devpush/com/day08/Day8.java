@@ -10,7 +10,6 @@ import java.util.Set;
 public class Day8 {
     public static void main(String[] args) throws IOException {
         Firststar();
-
     }
 
     private static void Firststar() throws IOException {
