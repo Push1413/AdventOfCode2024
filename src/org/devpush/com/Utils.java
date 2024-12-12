@@ -40,6 +40,24 @@ public class Utils {
         return matrix;
     }
 
+    public static int[][] convertListToIntMatrix(List<String>list){
+        if (list == null || list.isEmpty()) {
+            return new int[0][0];
+        }
+
+        int rows = list.size();
+        int cols = list.get(0).length();
+        int[][] matrix = new int[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = Integer.parseInt(String.valueOf(list.get(i).charAt(j)));
+            }
+        }
+
+        return matrix;
+    }
+
     public static boolean isSafe(int row, int col, char[][] matrix) {
         int rowSize = matrix.length;
         int colSize = matrix[0].length;
