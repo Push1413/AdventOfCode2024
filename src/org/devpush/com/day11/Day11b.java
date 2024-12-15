@@ -22,7 +22,7 @@ public class Day11b {
             }
         }
         // Symbol, number of stones with symbol
-        Map<Long, Long> stones = new HashMap<>(), next = new HashMap<>();
+        Map<Long, Long> stones = new HashMap<>(),next = new HashMap<>();
         // Symbol, next symbol(s)
         Map<Long, Long[]> cache = new HashMap<>();
 
