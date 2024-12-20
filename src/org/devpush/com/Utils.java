@@ -24,6 +24,23 @@ public class Utils {
         return list;
     }
 
+    public static String readWholeinput(boolean test, int day, boolean partb) throws IOException{
+        String testDir = "";
+        if (test) {
+            testDir = (partb) ? "test_b" : "test_a";
+        } else {
+            testDir = (partb) ? "input_b" : "input_a";
+        }
+        BufferedReader reader = new BufferedReader(new FileReader(testDir + "/day" + day + ".txt"));
+        // Read the entire file content into a single string
+        StringBuilder input = new StringBuilder();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            input.append(line).append("\n");
+        }
+        return input.toString();
+    }
+
     public static char[][] convertListToMatrix(List<String> list) {
         if (list == null || list.isEmpty()) {
             return new char[0][0];
@@ -68,5 +85,13 @@ public class Utils {
 
         return (row >= 0 && row < (rowSize) && col >= 0 && col < (colSize));
 
+    }
+
+    public static boolean isInteger(float num) {
+        return num == (int) num;
+    }
+
+    public static boolean isInteger(long num) {
+        return num == (int) num;
     }
 }
